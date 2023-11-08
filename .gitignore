@@ -1,0 +1,10 @@
+.vscode/*
+tsrc/*
+config.h
+config.log
+config.status
+libtool
+Makefile
+mksourceid
+sqlite3.pc
+sqlite3session.h
