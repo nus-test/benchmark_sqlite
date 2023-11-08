@@ -2625,9 +2625,6 @@ Bitmask sqlite3WhereCodeOneLoopStart(
           /* Defer processing WHERE clause constraints until after outer
           ** join processing.  tag-20220513a */
           continue;
-        }else if( (pTabItem->fg.jointype & JT_LEFT)==JT_LEFT
-               && !ExprHasProperty(pE,EP_OuterON) ){
-          continue;
         }else{
           Bitmask m = sqlite3WhereGetMask(&pWInfo->sMaskSet, pE->w.iJoin);
           if( m & pLevel->notReady ){
