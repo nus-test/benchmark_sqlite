@@ -13,6 +13,7 @@ Patches:
 | --- | --- | --- |
 |1 | https://sqlite.org/forum/forumpost/5cfe08eed6 | https://sqlite.org/src/info/4be0c60e38edc5d5 |
 |2 | https://sqlite.org/forum/forumpost/3902c7b833 | https://sqlite.org/src/info/3869fd9a2b9483cb |
+|3 | https://sqlite.org/forum/forumpost/3d9caa45cb | https://sqlite.org/src/info/bbaf1f2eb1e1637b |
 
 
 

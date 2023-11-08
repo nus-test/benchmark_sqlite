@@ -1503,9 +1503,6 @@ case OP_Copy: {
     memAboutToChange(p, pOut);
     sqlite3VdbeMemShallowCopy(pOut, pIn1, MEM_Ephem);
     Deephemeralize(pOut);
-    if( (pOut->flags & MEM_Subtype)!=0 &&  (pOp->p5 & 0x0002)!=0 ){
-      pOut->flags &= ~MEM_Subtype;
-    }
 #ifdef SQLITE_DEBUG
     pOut->pScopyFrom = 0;
 #endif
@@ -8312,17 +8309,6 @@ case OP_Function: {            /* group */
 
   REGISTER_TRACE(pOp->p3, pOut);
   UPDATE_MAX_BLOBSIZE(pOut);
-  break;
-}
-
-/* Opcode: ClrSubtype P1 * * * *
-** Synopsis:  r[P1].subtype = 0
-**
-** Clear the subtype from register P1.
-*/
-case OP_ClrSubtype: {   /* in1 */
-  pIn1 = &aMem[pOp->p1];
-  pIn1->flags &= ~MEM_Subtype;
   break;
 }
 
