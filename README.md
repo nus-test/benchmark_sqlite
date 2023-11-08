@@ -15,6 +15,7 @@ Patches:
 |2 | https://sqlite.org/forum/forumpost/3902c7b833 | https://sqlite.org/src/info/3869fd9a2b9483cb |
 |3 | https://sqlite.org/forum/forumpost/3d9caa45cb | https://sqlite.org/src/info/bbaf1f2eb1e1637b |
 |4 | https://sqlite.org/forum/forumpost/323f86cc30 | https://sqlite.org/src/info/bbaf1f2eb1e1637b |
+|5 | https://sqlite.org/forum/forumpost/c4676c4956 | https://sqlite.org/src/info/615c0026119f7870 |
 
 
 
