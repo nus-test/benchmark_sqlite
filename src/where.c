@@ -4181,22 +4181,10 @@ static int whereLoopAddAll(WhereLoopBuilder *pBuilder){
     pNew->iTab = iTab;
     pBuilder->iPlanLimit += SQLITE_QUERY_PLANNER_LIMIT_INCR;
     pNew->maskSelf = sqlite3WhereGetMask(&pWInfo->sMaskSet, pItem->iCursor);
-    if( bFirstPastRJ 
-     || (pItem->fg.jointype & (JT_OUTER|JT_CROSS|JT_LTORJ))!=0
-    ){
-      /* Add prerequisites to prevent reordering of FROM clause terms
-      ** across CROSS joins and outer joins.  The bFirstPastRJ boolean
-      ** prevents the right operand of a RIGHT JOIN from being swapped with
-      ** other elements even further to the right.
-      **
-      ** The JT_LTORJ case and the hasRightJoin flag work together to
-      ** prevent FROM-clause terms from moving from the right side of
-      ** a LEFT JOIN over to the left side of that join if the LEFT JOIN
-      ** is itself on the left side of a RIGHT JOIN.
-      */
-      if( pItem->fg.jointype & JT_LTORJ ) hasRightJoin = 1;
+    if( (pItem->fg.jointype & (JT_OUTER|JT_CROSS))!=0 ){
+      /* This condition is true when pItem is the FROM clause term on the
+      ** right-hand-side of a OUTER or CROSS JOIN.  */
       mPrereq |= mPrior;
-      bFirstPastRJ = (pItem->fg.jointype & JT_RIGHT)!=0;
     }else if( !hasRightJoin ){
       mPrereq = 0;
     }
