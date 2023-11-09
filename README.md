@@ -19,7 +19,7 @@ Patches:
 |6 | https://www.sqlite.org/src/tktview?name=9eda2697f5 | https://www.sqlite.org/src/info/1c76f1d8ec0937a2 |
 |7 | https://www.sqlite.org/src/tktview?name=e0c2ad1aa8 | https://www.sqlite.org/src/info/101f7dea75a203f1 |
 |8 | https://www.sqlite.org/src/tktview?name=3b84b42943 | https://www.sqlite.org/src/info/0271491438ad2a98 |
-
+|9 | https://www.sqlite.org/src/tktview?name=aa573a787b | https://www.sqlite.org/src/info/32772dfd50b602c0 |
 
 
 
