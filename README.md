@@ -7,6 +7,13 @@ git checkout e3fbde0df29b386f100c371b1fcf11ff7005c7c6
 ```
 Then we added some patched to inject previously-found bugs.
 
+Patches:
+
+| ID | Bug | Patch |
+| --- | --- | --- |
+|6 | https://www.sqlite.org/src/tktview?name=9eda2697f5 | https://www.sqlite.org/src/info/1c76f1d8ec0937a2 |
+
+
 
 
 The following is original README content.
