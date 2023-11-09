@@ -14,7 +14,7 @@ Patches:
 |1 | https://sqlite.org/forum/forumpost/5cfe08eed6 | https://sqlite.org/src/info/4be0c60e38edc5d5 |
 |2 | https://sqlite.org/forum/forumpost/3902c7b833 | https://sqlite.org/src/info/3869fd9a2b9483cb |
 |3 | https://sqlite.org/forum/forumpost/3d9caa45cb | https://sqlite.org/src/info/bbaf1f2eb1e1637b |
-|4 | https://sqlite.org/forum/forumpost/323f86cc30 | https://sqlite.org/src/info/bbaf1f2eb1e1637b |
+|4 | https://sqlite.org/forum/forumpost/323f86cc30 | https://sqlite.org/src/info/3f45007d544e5f78 |
 |5 | https://sqlite.org/forum/forumpost/c4676c4956 | https://sqlite.org/src/info/615c0026119f7870 |
 |6 | https://www.sqlite.org/src/tktview?name=9eda2697f5 | https://www.sqlite.org/src/info/1c76f1d8ec0937a2 |
 |7 | https://www.sqlite.org/src/tktview?name=e0c2ad1aa8 | https://www.sqlite.org/src/info/101f7dea75a203f1 |
