@@ -3749,20 +3749,11 @@ void sqlite3ExprCodeGeneratedColumn(
   Column *pCol,      /* The generated column */
   int regOut         /* Put the result in this register */
 ){
-  int iAddr;
-  Vdbe *v = pParse->pVdbe;
-  assert( v!=0 );
-  assert( pParse->iSelfTab!=0 );
-  if( pParse->iSelfTab>0 ){
-    iAddr = sqlite3VdbeAddOp3(v, OP_IfNullRow, pParse->iSelfTab-1, 0, regOut);
-  }else{
-    iAddr = 0;
-  }
   sqlite3ExprCodeCopy(pParse, sqlite3ColumnExpr(pTab,pCol), regOut);
   if( pCol->affinity>=SQLITE_AFF_TEXT ){
-    sqlite3VdbeAddOp4(v, OP_Affinity, regOut, 1, 0, &pCol->affinity, 1);
+    sqlite3VdbeAddOp4(pParse->pVdbe, OP_Affinity, regOut, 1, 0,
+                      &pCol->affinity, 1);
   }
-  if( iAddr ) sqlite3VdbeJumpHere(v, iAddr);
 }
 #endif /* SQLITE_OMIT_GENERATED_COLUMNS */
 
