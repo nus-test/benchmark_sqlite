@@ -4065,8 +4065,18 @@ expr_code_doover:
         assert( pCol->iMem>0 );
         return pCol->iMem;
       }else if( pAggInfo->useSortingIdx ){
+        Table *pTab = pCol->pTab;
         sqlite3VdbeAddOp3(v, OP_Column, pAggInfo->sortingIdxPTab,
                               pCol->iSorterColumn, target);
+        if( pCol->iColumn<0 ){
+          VdbeComment((v,"%s.rowid",pTab->zName));
+        }else{
+          VdbeComment((v,"%s.%s", 
+              pTab->zName, pTab->aCol[pCol->iColumn].zCnName));
+          if( pTab->aCol[pCol->iColumn].affinity==SQLITE_AFF_REAL ){
+            sqlite3VdbeAddOp1(v, OP_RealAffinity, target);
+          }
+        }
         return target;
       }
       /* Otherwise, fall thru into the TK_COLUMN case */
