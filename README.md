@@ -11,9 +11,6 @@ Patches:
 
 | ID | Bug | Patch |
 | --- | --- | --- |
-|7 | https://www.sqlite.org/src/tktview?name=e0c2ad1aa8 | https://www.sqlite.org/src/info/101f7dea75a203f1 |
-
-
 
 
 The following is original README content.
